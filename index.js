@@ -55,7 +55,7 @@ const connectWithRetry = () => {
 connectWithRetry();
 
 app.get("/", (req, res) => {
-  res.send("<h2>HIII</h>");
+  res.send("<h2>HI</h>");
   console.log("running");
 });
 
