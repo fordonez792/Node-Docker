@@ -11,13 +11,9 @@ services:
     volumes:
       - ./:/app:ro
       - /app/node_modules
-    environment:
-      - NODE_ENV=development
-      - MONGO_USER=fordonez792
-      - MONGO_PASSWORD=Fo410925
-      - SESSION_SECRET=secret
+    env_file:
+      - ./.env
     command: npm run dev
   mongo:
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=fordonez792
-      - MONGO_INITDB_ROOT_PASSWORD=Fo410925
+    env_file:
+      - ./.env
